@@ -60,3 +60,17 @@ f.close()
 f = open('output.txt','w')
 f.writelines(templines) # write a seq of strings to the file
 f.close()
+
+
+# dictionaries
+with open('rosalind_ini6.txt', 'r') as f:
+    content = f.read()
+    occurrence = {}
+    for word in content.split():
+        if word not in occurrence.keys():
+            occurrence[word] = 1
+        else:
+            occurrence[word] += 1
+        
+    for key, value in occurrence.items():
+        print (key, value)
