@@ -30,3 +30,21 @@ with open('rosalind_ini4.txt', 'r') as f:
 
     print(sum(range(a, b+1, 2)))
 
+print('\n')
+
+# working with files
+
+# Given: A file containing at most 1000 lines.
+
+# Return: A file containing all the even-numbered lines from the original file. Assume 1-based numbering of lines.
+    
+with open('rosalind_ini5.txt', 'r') as f:
+    content = f.read()
+
+# open a new file for writing
+with open('new_file.txt', 'w') as new_file:
+    for i in range(1, len(content.splitlines()), 2):
+        new_file.write(content.splitlines()[i] + '\n')
+
+
+    
