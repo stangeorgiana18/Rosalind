@@ -28,9 +28,5 @@ with open('rosalind_ini4.txt', 'r') as f:
     if a % 2 == 0:
         a += 1
 
-    odd_sum = 0
-    for i in range(a, b+1, 2):
-        odd_sum += i
-    
-    print(odd_sum)
+    print(sum(range(a, b+1, 2)))
 
