@@ -18,3 +18,19 @@ with open('rosalind_ini3.txt') as f:
     a, b, c, d = [int(x) for x in f.readline().split()] # read the 2nd line of the file and split it into a list of strings
 
     print(line[a : b+1],line[c : d+1])
+
+print('\n')
+
+# conditions and loops 
+
+with open('rosalind_ini4.txt', 'r') as f:
+    a, b = [int(x) for x in f.readline().split()]
+    if a % 2 == 0:
+        a += 1
+
+    odd_sum = 0
+    for i in range(a, b+1, 2):
+        odd_sum += i
+    
+    print(odd_sum)
+
