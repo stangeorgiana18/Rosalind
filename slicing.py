@@ -47,4 +47,16 @@ with open('new_file.txt', 'w') as new_file:
         new_file.write(content.splitlines()[i] + '\n')
 
 
-    
+# another way
+with open('rosalind_ini5.txt','r') as f:
+    print(''.join(f.readlines()[1::2]))
+
+
+# another way
+f = open('rosalind_ini5.txt','r')
+templines = f.readlines()[1::2] # read all lines from the file, selecting every second line
+f.close()
+
+f = open('output.txt','w')
+f.writelines(templines) # write a seq of strings to the file
+f.close()
