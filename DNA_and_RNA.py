@@ -53,3 +53,16 @@ result = rev_compl('rosalind_revc.txt')
 print(result, '\n')
 
 
+def hamming_distance(file_name):
+    with open(file_name, 'r') as f:
+        content = f.read()
+        sequence = content.split()
+
+        count = 0
+        for i in range(len(sequence[0])):
+            if sequence[0][i] != sequence[1][i]:
+                count += 1
+
+        return count
+    
+print(hamming_distance('rosalind_hamm.txt'))
