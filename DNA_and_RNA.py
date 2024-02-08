@@ -35,3 +35,21 @@ print(result)
 # cat rosalind_rna.txt | tr T U
 # tr - translate/transliterate to replace characters 
 
+print('\n')
+
+
+def rev_compl(file_name):
+    with open(file_name, 'r') as f:
+        dna = f.read().strip()
+
+        complement = ''.join(['A' if base == 'T' else 'T' if base == 'A' else 'C' if base == 'G' else 'G' if base == 'C' else base for base in dna])[::-1]
+        #complement = complement[::-1]
+
+        # or:
+        # complement = dna.replace('A', 'T').replace('T', 'A').replace('C', 'G').replace('G', 'C')[::-1]
+        return complement
+    
+result = rev_compl('rosalind_revc.txt')
+print(result, '\n')
+
+
